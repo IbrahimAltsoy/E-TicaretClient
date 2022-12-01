@@ -8,6 +8,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+
         }
       },
       "root": "",
@@ -28,9 +29,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/alertifyjs/build/css/alertify.min.css",
+              "./node_modules/alertifyjs/build/css/themes/semantic.min.css"
+
             ],
-            "scripts": []
+            "scripts":  [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/alertifyjs/build/alertify.min.js"
+
+            ]
+
+
+
+
           },
           "configurations": {
             "production": {
@@ -92,13 +107,20 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
+
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+
               "src/styles.scss"
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
+            ]
           }
         }
       }
