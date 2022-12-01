@@ -8,7 +8,7 @@ import { Create_Product } from '../../../contracts/create_product';
 export class ProductService {
 
   constructor(private httpClientService: HttpClientService) { }
-  create(product: Create_Product){
+  create(product: Create_Product, successCallBack?:any){
     this.httpClientService.post({
       controller:"products"
     },product).subscribe(result=>{
@@ -16,7 +16,8 @@ export class ProductService {
 //       <div class="alert alert-primary" role="alert">
 //       Başarılı
 // </div>
-      alert("Başarılı")
+successCallBack();
+      // alert("Başarılı")
 
     })
 
